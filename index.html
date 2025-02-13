@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میهن چت</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log("Service Worker Registered", reg))
+                .catch(err => console.log("Service Worker Failed", err));
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>میهن چت</h1>
+        <p>یک راه ارتباطی برای طرفداران</p>
+        <button class="button" onclick="alert('بخش پیام‌های شاهزاده هنوز فعال نیست')">📢 پیام‌های شاهزاده</button>
+        <button class="button" onclick="alert('ارسال پیشنهادات به زودی فعال خواهد شد')">✉️ ارسال پیشنهادات</button>
+        <button class="button" onclick="alert('بخش اطلاعیه‌ها در حال توسعه است')">📜 اطلاعیه‌ها</button>
+    </div>
+</body>
+</html>
